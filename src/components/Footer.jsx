@@ -58,8 +58,8 @@ export default function Footer() {
           <p className="text-xs" style={{ color: 'var(--color-text-muted)' }}>
             © {new Date().getFullYear()} Emcee Deep. All rights reserved.
           </p>
-          <a href="mailto:booking@emceedeep.com" className="text-xs theme-transition" style={{ color: 'var(--color-accent)' }}>
-            booking@emceedeep.com
+          <a href="mailto:emceedeep.official@gmail.com" className="text-xs theme-transition" style={{ color: 'var(--color-accent)' }}>
+            emceedeep.official@gmail.com
           </a>
         </div>
       </div>

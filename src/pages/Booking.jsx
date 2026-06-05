@@ -122,7 +122,7 @@ export default function Booking() {
         <div className="flex flex-col gap-8">
           {[
             { label: 'Response time', value: 'Within 48 hours' },
-            { label: 'Direct email', value: 'booking@emceedeep.com' },
+            { label: 'Direct email', value: 'emceedeep.official@gmail.com' },
             { label: 'Based in', value: 'Toronto, Canada' },
             { label: 'Available for', value: 'Club nights · Festivals · Private events · Fresh Ravers' },
           ].map(item => (

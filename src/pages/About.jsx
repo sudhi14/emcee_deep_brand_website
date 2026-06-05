@@ -56,7 +56,7 @@ export default function About() {
         </div>
         <p className="text-xs mt-4" style={{ color: 'var(--color-text-muted)' }}>
           High-res photos available on request.{' '}
-          <a href="mailto:booking@emceedeep.com" style={{ color: 'var(--color-accent)' }}>Email for press kit →</a>
+          <a href="mailto:emceedeep.official@gmail.com" style={{ color: 'var(--color-accent)' }}>Email for press kit →</a>
         </p>
       </section>
 
@@ -70,7 +70,7 @@ export default function About() {
             { label: 'Influences', value: 'Black Coffee · Carnatic classical · Indian film music' },
             { label: 'Events', value: 'Fresh Ravers — Toronto community rave' },
             { label: 'Viral track', value: 'Carnatic Meets Hip-Hop — 60k+ organic views' },
-            { label: 'Booking', value: 'booking@emceedeep.com' },
+            { label: 'Booking', value: 'emceedeep.official@gmail.com' },
           ].map(fact => (
             <div key={fact.label}>
               <p className="text-xs uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>{fact.label}</p>
