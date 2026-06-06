@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom'
+import eventsData from '../data/events.json'
 
-const upcomingEvents = [
-  // Add events here as you schedule them
-  // { title: 'Fresh Ravers 003', date: '2026-09-01', venue: 'Venue Name, Toronto', ticketUrl: '#', lineup: ['Infinite Loop', 'Artist 2'] }
-]
-
-const pastEvents = [
-  { title: 'Coffee Rave 001', date: 'April 2026', venue: 'Toronto', note: '' },
-  { title: 'Rave Project 001', date: 'December 2025', venue: 'Toronto', note: '' },
-]
+const upcomingEvents = eventsData.upcoming
+const pastEvents = eventsData.past
 
 export default function Events() {
   return (
@@ -39,15 +33,31 @@ export default function Events() {
           upcomingEvents.map((event, i) => (
             <div key={i} className="flex flex-col md:flex-row justify-between gap-6 py-6" style={{ borderBottom: '0.5px solid var(--color-border)' }}>
               <div>
+                {event.presentedBy && (
+                  <p className="text-xs uppercase tracking-widest mb-2" style={{ color: 'var(--color-accent)' }}>{event.presentedBy}</p>
+                )}
                 <h2 className="font-display text-xl font-medium mb-1" style={{ color: 'var(--color-text-primary)' }}>{event.title}</h2>
-                <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{event.date} · {event.venue}</p>
+                <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
+                  {new Date(event.date).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' })} · {event.venue}
+                </p>
                 {event.lineup && (
                   <p className="text-sm mt-1" style={{ color: 'var(--color-text-muted)' }}>Lineup: {event.lineup.join(', ')}</p>
                 )}
+                {event.tags && (
+                  <div className="flex gap-2 mt-3 flex-wrap">
+                    {event.tags.map(tag => (
+                      <span key={tag} className="text-xs px-3 py-1 rounded-full" style={{ border: '0.5px solid var(--color-accent)', color: 'var(--color-accent)' }}>{tag}</span>
+                    ))}
+                  </div>
+                )}
               </div>
-              <a href={event.ticketUrl} target="_blank" rel="noreferrer" className="px-6 py-3 text-sm rounded-sm self-start theme-transition" style={{ backgroundColor: 'var(--color-accent)', color: '#0D0D0D' }}>
-                Get tickets →
-              </a>
+              {event.private ? (
+                <span className="text-xs self-start px-4 py-2 rounded-sm" style={{ border: '0.5px solid var(--color-border)', color: 'var(--color-text-muted)' }}>Private Event</span>
+              ) : event.ticketUrl ? (
+                <a href={event.ticketUrl} target="_blank" rel="noreferrer" className="px-6 py-3 text-sm rounded-sm self-start theme-transition" style={{ backgroundColor: 'var(--color-accent)', color: '#0D0D0D' }}>
+                  Get tickets →
+                </a>
+              ) : null}
             </div>
           ))
         )}

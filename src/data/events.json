@@ -1,0 +1,49 @@
+{
+  "upcoming": [
+    {
+      "title": "GBD Night",
+      "date": "2026-06-13",
+      "venue": "Private Venue, Toronto",
+      "ticketUrl": "",
+      "lineup": [
+        "Infinite Loop"
+      ],
+      "tags": [
+        "Bollywood",
+        "House"
+      ],
+      "presentedBy": "Fresh Ravers",
+      "private": true
+    },
+    {
+      "title": "Aavesham 3.0",
+      "date": "2026-06-19",
+      "venue": "Dopamine Lounge, Toronto",
+      "ticketUrl": "https://www.eventbrite.ca/e/aavesham-ep3-midnight-euphoria-toronto-tickets-1990287557662?aff=oddtdtcreator",
+      "lineup": [
+        "Infinite Loop",
+        "BeatMohi",
+        "Faheem on FX"
+      ],
+      "tags": [
+        "Mallu x Tamil Club Bangers"
+      ],
+      "presentedBy": "Flamzy Events",
+      "private": false
+    }
+  ],
+  "past": [
+    {
+      "title": "Coffee Rave 001",
+      "date": "April 2026",
+      "venue": "Toronto",
+      "note": ""
+    },
+    {
+      "title": "Rave Project 001",
+      "date": "December 2025",
+      "venue": "Toronto",
+      "note": ""
+    }
+  ]
+}
