@@ -48,6 +48,9 @@ export default function About() {
             { src: '/images/img2.jpg', alt: 'Infinite Loop performing with lasers' },
             { src: '/images/img5.jpg', alt: 'Infinite Loop at the decks with crowd' },
             { src: '/images/img3.jpg', alt: 'Fresh Ravers event — crowd and DJs' },
+            { src: '/images/img7.jpg', alt: 'Infinite Loop — backshot at the decks with crowd' },
+            { src: '/images/img8.jpg', alt: 'Infinite Loop — B&W laser performance' },
+            { src: '/images/img6.jpg', alt: 'Infinite Loop — arms raised at the decks' },
           ].map((photo, i) => (
             <div key={i} className="aspect-square rounded-sm overflow-hidden" style={{ backgroundColor: 'var(--color-bg-secondary)' }}>
               <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover object-center" />
@@ -66,8 +69,8 @@ export default function About() {
         <div className="grid md:grid-cols-3 gap-8">
           {[
             { label: 'Based in', value: 'Toronto, Canada' },
-            { label: 'Genres', value: 'House · Hip-Hop · Trap · EDM · Carnatic Fusion' },
-            { label: 'Influences', value: 'Black Coffee · Carnatic classical · Indian film music' },
+            { label: 'Genres', value: 'Afro House · Groovy House · Tech House · Bass House · Techno · Hip-Hop · Trap · Dubstep · Carnatic Fusion' },
+            { label: 'Influences', value: 'Black Coffee · AR Rahman · Kanye West · Diplo · David Guetta · Dr. Dre · Carnatic classical' },
             { label: 'Events', value: 'Fresh Ravers — Toronto community rave' },
             { label: 'Viral track', value: 'Carnatic Meets Hip-Hop — 60k+ organic views' },
             { label: 'Booking', value: 'emceedeep.official@gmail.com' },

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import DatePicker from '../components/DatePicker'
 
 export default function Booking() {
   const [submitted, setSubmitted] = useState(false)
@@ -9,7 +10,7 @@ export default function Booking() {
     const data = new FormData(form)
 
     // Using Formspree — replace YOUR_FORM_ID with your Formspree form ID
-    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    const res = await fetch('https://formspree.io/f/mreveqeb', {
       method: 'POST',
       body: data,
       headers: { Accept: 'application/json' },
@@ -50,7 +51,6 @@ export default function Booking() {
                 { name: 'name', label: 'Your name', type: 'text', placeholder: 'Jane Smith' },
                 { name: 'email', label: 'Email', type: 'email', placeholder: 'jane@example.com' },
                 { name: 'event', label: 'Event type', type: 'text', placeholder: 'Club night, festival, private event...' },
-                { name: 'date', label: 'Event date', type: 'date', placeholder: '' },
               ].map(field => (
                 <div key={field.name} className="flex flex-col gap-2">
                   <label className="text-xs uppercase tracking-widest" style={{ color: 'var(--color-text-muted)' }}>{field.label}</label>
@@ -69,6 +69,12 @@ export default function Booking() {
                   />
                 </div>
               ))}
+
+              {/* Event date — custom date picker */}
+              <div className="flex flex-col gap-2">
+                <label className="text-xs uppercase tracking-widest" style={{ color: 'var(--color-text-muted)' }}>Event date</label>
+                <DatePicker name="date" required />
+              </div>
 
               {/* Inquiry type */}
               <div className="flex flex-col gap-2">

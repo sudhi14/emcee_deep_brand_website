@@ -6,8 +6,8 @@ const upcomingEvents = [
 ]
 
 const pastEvents = [
-  { title: 'Fresh Ravers 002', date: 'March 2026', venue: 'Toronto', note: 'Sold out' },
-  { title: 'Fresh Ravers 001 — Coffee Rave', date: 'November 2025', venue: 'Toronto', note: '' },
+  { title: 'Coffee Rave 001', date: 'April 2026', venue: 'Toronto', note: '' },
+  { title: 'Rave Project 001', date: 'December 2025', venue: 'Toronto', note: '' },
 ]
 
 export default function Events() {
