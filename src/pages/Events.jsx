@@ -38,7 +38,7 @@ export default function Events() {
                 )}
                 <h2 className="font-display text-xl font-medium mb-1" style={{ color: 'var(--color-text-primary)' }}>{event.title}</h2>
                 <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                  {new Date(event.date).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' })} · {event.venue}
+                  {(() => { const [y,m,d] = event.date.split('-'); return new Date(y, m-1, d).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' }) })()} · {event.venue}
                 </p>
                 {event.lineup && (
                   <p className="text-sm mt-1" style={{ color: 'var(--color-text-muted)' }}>Lineup: {event.lineup.join(', ')}</p>
