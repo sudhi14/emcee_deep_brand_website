@@ -16,8 +16,9 @@ export default function Home() {
           className="absolute inset-0"
           style={{
             backgroundImage: `url(${isEmceeDeep ? '/images/img22.jpg' : '/images/img5.jpg'})`,
-            backgroundSize: isEmceeDeep ? '130% auto' : 'cover',
-            backgroundPosition: isEmceeDeep ? '5% 60%' : 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: isEmceeDeep ? '30% 60%' : 'center',
             filter: isEmceeDeep ? 'grayscale(100%)' : 'none',
             transition: 'filter 0.5s ease, background-image 0.5s ease, background-position 0.5s ease',
           }}
@@ -28,7 +29,7 @@ export default function Home() {
           className="absolute inset-0"
           style={{
             background: isEmceeDeep
-              ? 'linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.3) 100%)'
+              ? 'linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.4) 100%)'
               : 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 100%)',
           }}
         />
