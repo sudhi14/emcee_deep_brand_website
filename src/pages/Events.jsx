@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import eventsData from '../data/events.json'
 
-const upcomingEvents = eventsData.upcoming
-const pastEvents = eventsData.past
+const today = new Date()
+today.setHours(0, 0, 0, 0)
+
+const allEvents = [...eventsData].sort((a, b) => new Date(b.date) - new Date(a.date))
+const upcomingEvents = allEvents.filter(e => new Date(e.date) >= today)
+const pastEvents = allEvents.filter(e => new Date(e.date) < today)
 
 export default function Events() {
   return (
